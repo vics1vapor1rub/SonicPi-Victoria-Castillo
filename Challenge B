@@ -1,22 +1,32 @@
 # Challenge B#
 #snare two times
-2.times do
-  sample :drum_snare_soft
-  sleep 2
+live_loop :pee do
+  2.times do
+    sample :drum_snare_soft
+    sleep 2
+  end
+  stop
 end
 
 #kick four times
-4.times do
-  sample :drum_heavy_kick, amp: 2
-  sleep 1
+live_loop :kick do
+  4.times do
+    sample :drum_heavy_kick, amp: 2
+    sleep 1
+  end
+  stop
 end
 
 #cymbal eight times
-8.times do
-  sample :drum_cymbal_closed
-  sleep 0.5
+live_loop :lick do
+  8.times do
+    sample :drum_cymbal_closed
+    sleep 0.5
+  end
+  stop
 end
 
+sleep 3
 
 #ALL TOGETHER NOW
 sample :drum_splash_hard, sustain: 3
