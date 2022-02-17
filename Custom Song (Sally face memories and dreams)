@@ -1,46 +1,54 @@
 # Sally Face
+define :sally do
+  
+  play :E4
+  sleep 1
+  play :E5
+  sleep 1
+  play :D5, sustain: 1.5
+  sleep 1.5
+  play :C5, sustain: 0.5
+  sleep 0.5
+  play :B4, sustain: 1.5
+  sleep 1.5
+  play :C5, sustain: 0.5
+  sleep 0.5
+  play :B4
+  sleep 1
+  play :G4
+  sleep 1
+  play :E4
+  sleep 1
+  play :E5
+  sleep 1
+  play :D5, sustain: 1.5
+  sleep 1.5
+  play :C5, sustain: 0.5
+  sleep 0.5
+  play :B4, sustain: 1.5
+  sleep 1.5
+  play :C5, sustain: 0.5
+  sleep 0.5
+  play :A4, sustain: 2
+  sleep 2
+end
 live_loop :pee do
   sample :drum_cymbal_soft
   sleep 0.4
 end
 use_bpm 150
 use_synth :rodeo
-play :E4
-sleep 1
-play :E5
-sleep 1
-play :D5, sustain: 1.5
-sleep 1.5
-play :C5, sustain: 0.5
-sleep 0.5
-play :B4, sustain: 1.5
-sleep 1.5
-play :C5, sustain: 0.5
-sleep 0.5
-play :B4
-sleep 1
-play :G4
-sleep 1
-play :E4
-sleep 1
-play :E5
-sleep 1
-play :D5, sustain: 1.5
-sleep 1.5
-play :C5, sustain: 0.5
-sleep 0.5
-play :B4, sustain: 1.5
-sleep 1.5
-play :C5, sustain: 0.5
-sleep 0.5
-play :A4, sustain: 2
-sleep 2
+with_fx :reverb do
+  sally
+end
 
 sample :drum_bass_hard
 live_loop :du do
   sample :drum_heavy_kick
+  sample :drum_bass_hard
   sleep 1
   sample :drum_snare_hard
+  
   sleep 1
 end
 live_loop :do do
@@ -81,3 +89,4 @@ live_loop :do do
     end
   end
 end
+ 
