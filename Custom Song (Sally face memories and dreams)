@@ -1,7 +1,10 @@
 
-  # Sally Face
+ # Sally Face
 #variable
-sallysamp = "C:/Users/victoria_castillo/Documents/Audacity/Sally Face sample (electric guitar).wav"
+use_bpm 150
+sallysamp = "C:/Users/victoria_castillo/Downloads/sally_facey_2.wav"
+a = 5
+
 
 define :sally do
   
@@ -37,10 +40,13 @@ define :sally do
   sleep 2
 end
 live_loop :pee do
-  sample :drum_cymbal_soft
-  sleep 0.4
+  32.times do
+    sample :drum_cymbal_soft
+    sleep 1
+  end
+  stop
 end
-use_bpm 150
+
 use_synth :rodeo
 with_fx :reverb do
   sally
@@ -48,18 +54,18 @@ end
 
 sample :drum_bass_hard
 live_loop :du do
-  sample :drum_heavy_kick
-  sample :drum_bass_hard
-  sleep 1
-  sample :drum_snare_hard
-  sleep 1
+  8.times do
+    sample :drum_heavy_kick
+    sample :drum_bass_hard
+    sleep 1
+    sample :drum_snare_hard
+    sleep 1
+  end
+  stop
 end
-live_loop :poo do
-  sample sallysamp
-  sleep 5
-end
-live_loop :do do
-  use_bpm 150
+
+
+2.times do
   use_synth :rodeo
   with_fx :flanger do
     with_fx :bpf do
@@ -93,7 +99,50 @@ live_loop :do do
       sleep 0.5
       play :A4, decay: 2, amp: 5
       sleep 2
-      
     end
   end
+  stop
+end
+sleep 32
+#Final Fade Out Live_Loop#`
+live_loop :Fi do
+  5.times do
+    use_synth :rodeo
+    with_fx :flanger do
+      with_fx :bpf do
+        play :E4, amp: a
+        sleep 1
+        play :E5, amp: a
+        sleep 1
+        play :D5, sustain: 1.5, amp: a
+        sleep 1.5
+        play :C5, sustain: 0.5, amp: a
+        sleep 0.5
+        play :B4, sustain: 1.5, amp: a
+        sleep 1.5
+        play :C5, sustain: 0.5, amp: a
+        sleep 0.5
+        play :B4, amp: a
+        sleep 1
+        play :G4, amp: a
+        sleep 1
+        play :E4, amp: a
+        sleep 1
+        play :E5, amp: a
+        sleep 1
+        play :D5, sustain: 1.5, amp: a
+        sleep 1.5
+        play :C5, sustain: 0.5, amp: a
+        sleep 0.5
+        play :B4, sustain: 1.5, amp: a
+        sleep 1.5
+        play :C5, sustain: 0.5, amp: a
+        sleep 0.5
+        play :A4, decay: 2, amp: a
+        sleep 2
+        a = a - 1
+      end
+    end
+  end
+  stop
 end
