@@ -1,5 +1,4 @@
-
- # Sally Face
+# Sally Face
 #variable
 use_bpm 150
 sallysamp = "C:/Users/victoria_castillo/Downloads/sally_facey_2.wav"
@@ -64,6 +63,7 @@ live_loop :du do
   stop
 end
 
+sample sallysamp, amp: 0.5
 
 2.times do
   use_synth :rodeo
@@ -101,9 +101,10 @@ end
       sleep 2
     end
   end
-  stop
 end
-sleep 32
+
+
+
 #Final Fade Out Live_Loop#`
 live_loop :Fi do
   5.times do
