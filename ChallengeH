@@ -1,0 +1,79 @@
+#CHallenge H#
+
+use_bpm 120
+use_synth :chiplead
+
+define :my_player do |n, e|#two inputs
+  play n
+  play e
+  sleep 0.5
+end
+
+
+# MEASURE 1 ---------------------------
+my_player :a4, :a5
+
+my_player :a4, :a5
+
+my_player :c5, :c6
+
+my_player :a4, :a5
+
+my_player :d5, :d6
+
+my_player :a4, :a5
+
+my_player :e5, :e6
+
+my_player :d5, :d6
+
+# MEASURE 2 ---------------------------
+my_player :c5, :c6
+
+my_player :c5, :c6
+
+my_player :e5, :e6
+
+my_player :c5, :c6
+
+my_player :g5, :g6
+
+my_player :c5, :c6
+
+my_player :e5, :e6
+
+my_player :c5, :c6
+
+# MEASURE 3 ---------------------------
+my_player :g4, :g5
+
+my_player :g4, :g5
+
+my_player :b4, :b5
+
+my_player :g4, :g5
+
+my_player :c5, :c6
+
+my_player :g4, :g5
+
+my_player :d5, :d6
+
+my_player :c5, :c6
+
+# MEASURE 4 ---------------------------
+my_player :f4, :f5
+
+my_player :f4, :f5
+
+my_player :a4, :a5
+
+my_player :f4, :f5
+
+my_player :c5, :c6
+
+my_player :f4, :f5
+
+my_player :c5, :c6
+
+my_player :b4, :b5
