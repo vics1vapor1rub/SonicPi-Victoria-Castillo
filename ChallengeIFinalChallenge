@@ -1,0 +1,27 @@
+#Challenge I#
+use_bpm 160
+use_synth :saw
+define :strangeMes do |n, i, c, o, h|
+  play n
+  sleep 0.5
+  play i
+  sleep 0.5
+  play c
+  sleep 0.5
+  play o
+  sleep 0.5
+  play h
+  sleep 0.5
+  play o
+  sleep 0.5
+  play c
+  sleep 0.5
+  play i
+  sleep 0.5
+end
+
+# Stranger Things Main Theme
+strangeMes :c2, :e2, :g2, :b2, :c3
+strangeMes :c3, :e3, :g3, :b3, :c4
+strangeMes :c4, :e4, :g4, :b4, :c5
+strangeMes :c5, :e5, :g5, :b5, :c6
