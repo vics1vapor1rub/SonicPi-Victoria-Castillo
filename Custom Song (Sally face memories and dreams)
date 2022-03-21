@@ -3,43 +3,43 @@
 use_bpm 150
 sallysamp = "C:/Users/victoria_castillo/Downloads/sally_facey_2.wav"
 a = 5
-
-
-define :sally do
-  
-  play :E4
+index = 0
+rawrXD = [1,1]
+define :sally do |e|
+  play :E4, sustain: 1, amp: e
   sleep 1
-  play :E5
+  play :E5,sustain: 1, amp: e
   sleep 1
-  play :D5, sustain: 1.5
+  play :D5, sustain: 1.5, amp: e
   sleep 1.5
-  play :C5, sustain: 0.5
+  play :C5, sustain: 0.5, amp: e
   sleep 0.5
-  play :B4, sustain: 1.5
+  play :B4, sustain: 1.5, amp: e
   sleep 1.5
-  play :C5, sustain: 0.5
+  play :C5, sustain: 0.5, amp: e
   sleep 0.5
-  play :B4
+  play :B4,sustain: 1, amp: e
   sleep 1
-  play :G4
+  play :G4,sustain: 1, amp: e
   sleep 1
-  play :E4
+  play :E4,sustain: 1, amp: e
   sleep 1
-  play :E5
+  play :E5,sustain: 1, amp: e
   sleep 1
-  play :D5, sustain: 1.5
+  play :D5, sustain: 1.5, amp: e
   sleep 1.5
-  play :C5, sustain: 0.5
+  play :C5, sustain: 0.5, amp: e
   sleep 0.5
-  play :B4, sustain: 1.5
+  play :B4, sustain: 1.5, amp: e
   sleep 1.5
-  play :C5, sustain: 0.5
+  play :C5, sustain: 0.5, amp: e
   sleep 0.5
-  play :A4, sustain: 2
+  play :A4, sustain: 2, amp: e
   sleep 2
 end
+
 live_loop :pee do
-  32.times do
+  48.times do
     sample :drum_cymbal_soft
     sleep 1
   end
@@ -48,62 +48,34 @@ end
 
 use_synth :rodeo
 with_fx :reverb do
-  sally
+  sally 1
 end
 
 sample :drum_bass_hard
 live_loop :du do
-  8.times do
+  16.times do
     sample :drum_heavy_kick
     sample :drum_bass_hard
-    sleep 1
+    sleep rawrXD[index]
+    index = index + 1
     sample :drum_snare_hard
-    sleep 1
+    sleep rawrXD[index]
+    index = 0
   end
   stop
 end
 
-sample sallysamp, amp: 0.5
-
-2.times do
+3.times do
+  sample sallysamp, amp: 0.2
+end
+3.times do
   use_synth :rodeo
   with_fx :flanger do
     with_fx :bpf do
-      play :E4, amp: 5
-      sleep 1
-      play :E5, amp: 5
-      sleep 1
-      play :D5, sustain: 1.5, amp: 5
-      sleep 1.5
-      play :C5, sustain: 0.5, amp: 5
-      sleep 0.5
-      play :B4, sustain: 1.5, amp: 5
-      sleep 1.5
-      play :C5, sustain: 0.5, amp: 5
-      sleep 0.5
-      play :B4, amp: 5
-      sleep 1
-      play :G4, amp: 5
-      sleep 1
-      play :E4, amp: 5
-      sleep 1
-      play :E5, amp: 5
-      sleep 1
-      play :D5, sustain: 1.5, amp: 5
-      sleep 1.5
-      play :C5, sustain: 0.5, amp: 5
-      sleep 0.5
-      play :B4, sustain: 1.5, amp: 5
-      sleep 1.5
-      play :C5, sustain: 0.5, amp: 5
-      sleep 0.5
-      play :A4, decay: 2, amp: 5
-      sleep 2
+      sally 5
     end
   end
 end
-
-
 
 #Final Fade Out Live_Loop#`
 live_loop :Fi do
@@ -111,36 +83,7 @@ live_loop :Fi do
     use_synth :rodeo
     with_fx :flanger do
       with_fx :bpf do
-        play :E4, amp: a
-        sleep 1
-        play :E5, amp: a
-        sleep 1
-        play :D5, sustain: 1.5, amp: a
-        sleep 1.5
-        play :C5, sustain: 0.5, amp: a
-        sleep 0.5
-        play :B4, sustain: 1.5, amp: a
-        sleep 1.5
-        play :C5, sustain: 0.5, amp: a
-        sleep 0.5
-        play :B4, amp: a
-        sleep 1
-        play :G4, amp: a
-        sleep 1
-        play :E4, amp: a
-        sleep 1
-        play :E5, amp: a
-        sleep 1
-        play :D5, sustain: 1.5, amp: a
-        sleep 1.5
-        play :C5, sustain: 0.5, amp: a
-        sleep 0.5
-        play :B4, sustain: 1.5, amp: a
-        sleep 1.5
-        play :C5, sustain: 0.5, amp: a
-        sleep 0.5
-        play :A4, decay: 2, amp: a
-        sleep 2
+        sally 1
         a = a - 1
       end
     end
