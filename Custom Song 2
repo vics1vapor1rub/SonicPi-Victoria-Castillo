@@ -1,0 +1,38 @@
+
+use_bpm 100
+use_synth :piano
+with_fx :reverb do
+  #Treble Clef#
+  #Measure 1#
+  play :Fs5
+  sleep 1
+  play :Cs6
+  sleep 1
+  #Measure 2#
+  play :Gs5, sustian: 1.5
+  play :Cs5, sustian: 1.5
+  play :Es5, sustian: 1.5
+  sleep 3
+  play :A5, sustian: 0.5
+  sleep 0.5
+  play :A5
+  play :Fs5
+  play :Cs5
+  sleep 1
+  play :Fs5
+  sleep 1
+  play :Cs6
+  sleep 1
+  #Measure 3
+  play :Gs5, sustian: 1.5
+  play :Cs5, sustian: 1.5
+  play :Es5, sustian: 1.5
+  sleep 1.5
+  play :A5, sustian: 0.5
+  sleep 0.5
+  play :B5
+  sleep 1
+  play :A5
+  sleep 1
+  
+end
