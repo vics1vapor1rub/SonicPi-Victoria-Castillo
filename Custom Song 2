@@ -1,103 +1,107 @@
 # Elfen Lied Lilium Song 2
 # sample
-bell = "C:/Users/victoria_castillo/Downloads/liliumbells(2).wav"
+bells = "C:/Users/victoria_castillo/Downloads/liliumbells(2).wav"
 vocals = "C:/Users/victoria_castillo/Downloads/lilium_vocals.wav"
+
 # variable
+s = 0.9
+a1 = 1
+a2 = 0.25
 
 #defining functions#
-define :treb do
+define :treb do |n , i , k , o, s , w, a ,p, e, y, z, r, m|
   #Treble Clef#
   #Measure 1#
-  play :Fs5, sustain: 1
+  play n, sustain: 1, amp: a1
   sleep 1
-  play :Cs6, sustain: 1
+  play i, sustain: 1, amp: a1
   sleep 1
   #Measure 2#
-  play :Gs5, sustain: 1.5
-  play :Cs5, sustain: 1.5
-  play :Es5, sustain: 1.5
+  play k, sustain: 1.5, amp: a1
+  play o, sustain: 1.5, amp: a1
+  play s, sustain: 1.5, amp: a1
   sleep 3
-  play :A5, sustain: 0.5
+  play w, sustain: 0.5, amp: a1
   sleep 1
-  play :A5, sustain: 1
-  play :Fs5, sustain: 1
-  play :Cs5, sustain: 1
+  play w, sustain: 1, amp: a1
+  play n, sustain: 1, amp: a1
+  play o, sustain: 1, amp: a1
   sleep 2
-  play :Fs5, sustain: 1
+  play n, sustain: 1, amp: a1
   sleep 1
-  play :Cs6, sustain: 1
+  play a, sustain: 1, amp: a1
   sleep 1
   #Measure 3
-  play :Gs5, sustain: 1.5
-  play :Cs5, sustain: 1.5
-  play :Es5, sustain: 1.5
+  play k, sustain: 1.5, amp: a1
+  play o, sustain: 1.5, amp: a1
+  play s, sustain: 1.5, amp: a1
   sleep 3#2
-  play :A5, sustain: 0.5
+  play w, sustain: 0.5, amp: a1
   sleep 1
-  play :B5, sustain: 1
+  play e, sustain: 1, amp: a1
   sleep 1
-  play :A5, sustain: 1
+  play w, sustain: 1, amp: a1
   sleep 1
   #Measure 4
-  play :Fs5, sustain: 2
-  play :D5, sustain: 2
-  play :A4, sustain: 2
+  play n, sustain: 2, amp: a1
+  play y, sustain: 2, amp: a1
+  play m, sustain: 2, amp: a1
   sleep 4
-  play :Fs5, sustain: 1
-  play :D5, sustain: 1
-  play :A4, sustain: 1
+  play n, sustain: 1, amp: a1
+  play y, sustain: 1, amp: a1
+  play m, sustain: 1, amp: a1
   sleep 1
-  play :Gs5, sustain: 1
-  play :B4, sustain: 1
+  play k, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
   sleep 1
-  play :E5, sustain: 1
-  play :B4, sustain: 1
+  play z, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
   sleep 1
-  play :D5, sustain: 1
-  play :B4, sustain: 1
+  play y, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
   sleep 1
   #Measure 5
-  play :E5, sustain: 2
-  play :B4, sustain: 2
-  play :G4, sustain: 2
+  play z, sustain: 2, amp: a1
+  play p, sustain: 2, amp: a1
+  play r, sustain: 2, amp: a1
   sleep 4
-  play :E5, sustain: 1
-  play :B4, sustain: 1
-  play :G4, sustain: 1
+  play z, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
+  play r, sustain: 1, amp: a1
   sleep 1
-  play :Fs5, sustain: 1
-  play :A4, sustain: 1
+  play n, sustain: 1, amp: a1
+  play m, sustain: 1, amp: a1
   sleep 1
-  play :D5, sustain: 1
-  play :A4, sustain: 1
+  play y, sustain: 1, amp: a1
+  play m, sustain: 1, amp: a1
   sleep 1
-  play :Cs5, sustain: 1
-  play :A4, sustain: 1
+  play o, sustain: 1, amp: a1
+  play m, sustain: 1, amp: a1
   sleep 1
   #Measure 6
-  play :B4, sustain: 1
-  play :D5, sustain: 1
+  play p, sustain: 1, amp: a1
+  play y, sustain: 1, amp: a1
   sleep 1
-  play :E5, sustain: 1
-  play :B4, sustain: 1
+  play z, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
   sleep 1
-  play :Fs5, sustain: 1
-  play :B4, sustain: 1
+  play n, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
   sleep 2#1
-  play :Fs5, sustain: 1
-  play :B4, sustain: 1
+  play n, sustain: 1, amp: a1
+  play p, sustain: 1, amp: a1
   sleep 1
-  play :Gs5, sustain: 1
+  play k, sustain: 1, amp: a1
   sleep 1
-  play :A5, sustain: 1
+  play w, sustain: 1, amp: a1
   sleep 1
-  play :B5, sustain: 1
+  play e, sustain: 1, amp: a1
   sleep 1
   #Measure 7
-  play :A5, sustain: 2
+  play w, sustain: 2, amp: a1
   sleep 4 #5
-  play :Gs5, sustain: 1.5
-  play :Es5, sustain: 1.5
+  play k, sustain: 1.5, amp: a1
+  play s, sustain: 1.5, amp: a1
   sleep 2 #3
   sleep 2
 end
@@ -106,98 +110,98 @@ define :baSS do
   #Measure 1
   sleep 2
   #Measure 2
-  play :Es3, sustain: 1, amp: 0.5
+  play :Es3, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :G4, sustain: 1, amp: 0.25
+  play :G4, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :F3, sustain: 1, amp: 0.25
+  play :F3, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :A4, sustain: 1, amp: 0.25
+  play :A4, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
   #Measure 3
-  play :Es3, sustain: 1, amp: 0.25
+  play :Es3, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :G4, sustain: 1, amp: 0.25
+  play :G4, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :F3, sustain: 1, amp: 0.25
+  play :F3, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
   #Measure 4
-  play :D3, sustain: 1, amp: 0.25
+  play :D3, sustain: 1, amp: a2
   sleep 1
-  play :As3, sustain: 1, amp: 0.25
+  play :As3, sustain: 1, amp: a2
   sleep 1
-  play :F3, sustain: 1, amp: 0.25
+  play :F3, sustain: 1, amp: a2
   sleep 1
-  play :As3, sustain: 1, amp: 0.25
+  play :As3, sustain: 1, amp: a2
   sleep 1
-  play :D3, sustain: 1, amp: 0.25
+  play :D3, sustain: 1, amp: a2
   sleep 1
-  play :G3, sustain: 1, amp: 0.25
+  play :G3, sustain: 1, amp: a2
   sleep 1
-  play :E3, sustain: 1, amp: 0.25
+  play :E3, sustain: 1, amp: a2
   sleep 1
-  play :G3, sustain: 1, amp: 0.25
+  play :G3, sustain: 1, amp: a2
   sleep 1
   #Measure 5
-  play :Cs3, sustain: 1, amp: 0.25
+  play :Cs3, sustain: 1, amp: a2
   sleep 1
-  play :Gs3, sustain: 1, amp: 0.25
+  play :Gs3, sustain: 1, amp: a2
   sleep 1
-  play :E4, sustain: 1, amp: 0.25
+  play :E4, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :Fs3, sustain: 1, amp: 0.25
+  play :Fs3, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :F4, sustain: 1, amp: 0.25
+  play :F4, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
   #Measure 6
-  play :B2, sustain: 1, amp: 0.25
+  play :B2, sustain: 1, amp: a2
   sleep 1
-  play :D3, sustain: 1, amp: 0.25
+  play :D3, sustain: 1, amp: a2
   sleep 1
-  play :Fs3, sustain: 1, amp: 0.25
+  play :Fs3, sustain: 1, amp: a2
   sleep 1
-  play :B3, sustain: 1, amp: 0.25
+  play :B3, sustain: 1, amp: a2
   sleep 1
-  play :Bs2, sustain: 1, amp: 0.25
+  play :Bs2, sustain: 1, amp: a2
   sleep 1
-  play :Ds3, sustain: 1, amp: 0.25
+  play :Ds3, sustain: 1, amp: a2
   sleep 1
-  play :Fs3, sustain: 1, amp: 0.25
+  play :Fs3, sustain: 1, amp: a2
   sleep 1
-  play :Bs3, sustain: 1, amp: 0.25
+  play :Bs3, sustain: 1, amp: a2
   sleep 1
   #Measure 7
-  play :Cs3, sustain: 1, amp: 0.25
+  play :Cs3, sustain: 1, amp: a2
   sleep 1
-  play :Fs3, sustain: 1, amp: 0.25
+  play :Fs3, sustain: 1, amp: a2
   sleep 1
-  play :A3, sustain: 1, amp: 0.25
+  play :A3, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1, amp: 0.25
+  play :C4, sustain: 1, amp: a2
   sleep 1
-  play :C4, sustain: 1.5, amp: 0.25
-  play :Es4, sustain: 1.5, amp: 0.25
-  play :G4, sustain: 1.5, amp: 0.25
+  play :C4, sustain: 1.5, amp: a2
+  play :Es4, sustain: 1.5, amp: a2
+  play :G4, sustain: 1.5, amp: a2
   sleep 2
   sleep 2
 end
@@ -218,11 +222,11 @@ end
 sleep 8
 
 2.times do
-  sample bell, amp: 4, sustain: 6
+  sample bells, amp: 4, sustain: 6
   sleep 2.2
 end
 
-use_bpm 98
+use_bpm 113
 use_synth :chiplead
 
 live_loop :si do #48 beats
@@ -230,7 +234,8 @@ live_loop :si do #48 beats
     with_fx :reverb do
       #Treble Clef#
       #Measure 1#
-      treb
+      treb :Fs5, :Cs6, :Gs5, :Cs5, :Es5, :A5, :Cs6, :B4, :B5, :D5, :E5, :G4, :A4
+      a1 = a1 - 0.5
     end
   end
   stop
@@ -240,17 +245,22 @@ live_loop :pee do
     with_fx :reverb do
       #bass
       baSS
+      a2 = a2 - 0.125
     end
   end
   stop
 end
-sleep 46
+sleep 45.5
 
-sample :bd_boom
-sleep 1
+6.times do
+  sample :bd_klub
+  sleep s
+  s = s - 0.25
+end
+sleep 0.5
 
 live_loop :tea do
-  24.times do
+  22.times do
     sample :bd_808, amp: 1
     sample :bd_haus
     sleep 1
@@ -262,5 +272,14 @@ live_loop :tea do
   end
   stop
 end
+sleep 1
 
-
+sample vocals, amp: 2
+sleep 44
+play :Gs5, sustain: 3, amp: 0.25
+play :Es5, sustain: 3, amp: 0.25
+play :C4, sustain: 3, amp: 0.25
+play :Es4, sustain: 3, amp: 0.25
+play :G4, sustain: 3, amp: 0.25
+sample :bd_boom
+sleep 1
