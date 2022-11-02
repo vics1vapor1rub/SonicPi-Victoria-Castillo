@@ -1,0 +1,103 @@
+// https://www.w3schools.com/js/js_timing.asp
+// https://stackoverflow.com/questions/5898656/check-if-an-element-contains-a-class-in-javascript
+// https://www.w3schools.com/js/js_if_else.asp
+var a = document.getElementById("j1");
+var b = document.getElementById("j2");
+var c = document.getElementById("j3");
+var d = document.getElementById("j4");
+var n = 0;
+var nt = 0;
+var nh = 0;
+var ls = 0;
+
+function firstJack() {
+  n++;
+  console.log(n);
+  if (n == 1) {
+    j1.src = "images/faces/jack1.png";
+  } else if (n == 2) {
+    j1.src = "images/faces/jack2.png";
+  } else if (n == 3) {
+    j1.src = "images/faces/jack3.png";
+  } else if (n == 4) {
+    j1.src = "images/faces/jack4.png";
+
+    a.classList.add("translucent");
+    document.getElementById("square1").classList.add("slate");
+    j1.classList.remove((onclick = "firstJack()"));
+  }
+}
+
+function secondJack() {
+  nt++;
+  console.log(n);
+  if (nt == 1) {
+    j2.src = "images/faces/jack1.png";
+  } else if (nt == 2) {
+    j2.src = "images/faces/jack2.png";
+  } else if (nt == 3) {
+    j2.src = "images/faces/jack3.png";
+  } else if (nt == 4) {
+    j2.src = "images/faces/jack4.png";
+
+    b.classList.add("translucent");
+    document.getElementById("square2").classList.add("slate");
+    j2.classList.remove((onclick = "secondJack()"));
+  }
+}
+
+function thirdJack() {
+  nh++;
+  console.log(n);
+  if (nh == 1) {
+    j3.src = "images/faces/jack1.png";
+  } else if (nh == 2) {
+    j3.src = "images/faces/jack2.png";
+  } else if (nh == 3) {
+    j3.src = "images/faces/jack3.png";
+  } else if (nh == 4) {
+    j3.src = "images/faces/jack4.png";
+
+    c.classList.add("translucent");
+    document.getElementById("square3").classList.add("slate");
+    j3.classList.remove((onclick = "thirdJack()"));
+  }
+}
+
+function fourthJack() {
+  ls++;
+  console.log(n);
+  if (ls == 1) {
+    j4.src = "images/faces/jack1.png";
+  } else if (ls == 2) {
+    j4.src = "images/faces/jack2.png";
+  } else if (ls == 3) {
+    j4.src = "images/faces/jack3.png";
+  } else if (ls == 4) {
+    j4.src = "images/faces/jack4.png";
+
+    d.classList.add("translucent");
+    document.getElementById("square4").classList.add("slate");
+    j4.classList.remove((onclick = "fourthJack()"));
+  }
+}
+
+function playSong() {
+  document.getElementById("my_song").play();
+}
+
+function resetAll() {
+  a.src = "images/faces/jack.png";
+  a.classList.remove("translucent");
+  b.src = "images/faces/jack.png";
+  b.classList.remove("translucent");
+  c.src = "images/faces/jack.png";
+  c.classList.remove("translucent");
+  d.src = "images/faces/jack.png";
+  d.classList.remove("translucent");
+  document.getElementById("square1").classList.remove("slate");
+  document.getElementById("square2").classList.remove("slate");
+  document.getElementById("square3").classList.remove("slate");
+  document.getElementById("square4").classList.remove("slate");
+  playSong();
+}
